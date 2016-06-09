@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+if [ ! -d build ]; then
+  git clone git@github.com:mruby/mruby.git build
+fi
+
+cd build
+git pull origin master
+rake
+
+cd -
