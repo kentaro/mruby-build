@@ -2,11 +2,11 @@
 
 set -e
 
-if [ ! -d build ]; then
-  git clone git@github.com:mruby/mruby.git build
+if [ ! -d mruby ]; then
+  git clone git@github.com:mruby/mruby.git mruby
 fi
 
-cd build
+cd mruby
 git pull origin master
 rake
 
